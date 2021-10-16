@@ -7,4 +7,7 @@ class BooksController < ApplicationController
     
     def show
     end
+    
+    def hello!
+    end
 end
