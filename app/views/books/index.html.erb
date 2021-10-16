@@ -1,0 +1,14 @@
+<%= form_with model: @book, local:true do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_area :body %>
+    <%= f.submit "create" %>
+<% end %>
+
+
+<% @books.each do |book| %>
+    <%= book.tile %>
+    <%= book.body %>
+    <%= link_to "show", book_path(book.id) %>
+    <%= link_to "Edit", book_edit(book.id) %>
+    <%= link_to "destory", book_path, method: :delete %>
+<% end %>
