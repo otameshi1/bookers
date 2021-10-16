@@ -19,6 +19,7 @@ class BooksController < ApplicationController
     def show
     end
     
+
     def destory
     end
     
@@ -26,5 +27,6 @@ class BooksController < ApplicationController
     private
     def book_params
         require(:book).permit(:title, :body)
+
     end
 end
